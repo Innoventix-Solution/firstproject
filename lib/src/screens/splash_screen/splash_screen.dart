@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:firstproject/src/screens/auth_screen/login.dart';
 import 'package:firstproject/src/screens/home_screen/home_screen.dart';
+import 'package:firstproject/src/utils/images.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   handleTimeout() async {
-    Navigator.of(context).pushReplacementNamed(HomeScreen.route);
+    Navigator.of(context).pushReplacementNamed(LoginScreen.route);
   }
 
   @override
@@ -40,10 +42,8 @@ class _SplashScreenState extends State<SplashScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text("Splash"),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.1,
-              ),
+              Image.asset(ImageAssets.splashImage),
+
             ],
           ),
         ),
