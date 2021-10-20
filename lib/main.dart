@@ -1,3 +1,4 @@
+import 'package:firstproject/src/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HomeScreen(),
+      routes: {
+        HomeScreen.route: (context) => const HomeScreen(),
+
+      },
     );
   }
 }
